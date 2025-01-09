@@ -1,6 +1,6 @@
 # Emotion Detection Application
 
-This project utilizes the Watson NLP library to detect emotions from text. The application leverages the Emotion Predict function of the Watson NLP Library, which is embedded within the environment and does not require explicit imports. Instead, it interacts with the library through HTTP POST requests.
+Emotion Detection system that processes feedback provided by the customer in text format and deciphers the associated emotion expressed. This project utilizes the Watson NLP library to detect emotions from text. The application leverages the Emotion Predict function of the Watson NLP Library, which is embedded within the environment and does not require explicit imports. Instead, it interacts with the library through HTTP POST requests.
 
 ## NLP Sentiment Analysis Overview
 
