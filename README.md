@@ -1,9 +1,22 @@
-# Emotion Detector using the Watson NLP library
+# Emotion Detection Application
 
-For this project, you'll use the Emotion Predict function of the Watson NLP Library. For accessing this function, the URL, the headers, and the input json format is as follows.
+This project utilizes the Watson NLP library to detect emotions from text. The application leverages the Emotion Predict function of the Watson NLP Library, which is embedded within the environment and does not require explicit imports. Instead, it interacts with the library through HTTP POST requests.
 
-´´´URL: 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict'
-Headers: {"grpc-metadata-mm-model-id": "emotion_aggregated-workflow_lang_en_stock"}
-Input json: { "raw_document": { "text": text_to_analyse } }
-´´´
-Note that the text_to_analyze is being used as a variable that holds the actual written text that needs to be analyzed.
+## Features
+
+- **Emotion Analysis**: Analyze the emotional tone from the text using the Watson NLP's embedded libraries.
+- **Simple HTTP Interface**: Utilizes a straightforward HTTP POST interface for sending data and receiving emotion analysis.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Ensure you have the following installed:
+- Python 3.8 or later
+- Requests library
+
+You can install the Requests library using pip:
+```bash
+pip install requests
