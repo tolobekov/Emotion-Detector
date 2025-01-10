@@ -2,6 +2,9 @@ import requests
 import json
 
 def emotion_detector(text_to_analyse):
+    if not text_to_analyse.strip():  # Check for blank or whitespace-only entries
+        return {'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
+
     # URL of the Emotion Predict service
     url = 'https://sn-watson-emotion.labs.skills.network/v1/watson.runtime.nlp.v1/NlpService/EmotionPredict'
 
@@ -14,6 +17,9 @@ def emotion_detector(text_to_analyse):
     # Sending a POST request to the Emotion prediction API
     response = requests.post(url, json=myobj, headers=header)
     data = response.json()
+
+    if response.status_code == 400 or response.status_code == 500:
+        return {'anger': None, 'disgust': None, 'fear': None, 'joy': None, 'sadness': None, 'dominant_emotion': None}
 
     # Extract the first set of emotion data from the response
     emotions = data['emotionPredictions'][0]['emotion']
@@ -32,5 +38,5 @@ def emotion_detector(text_to_analyse):
 
     # Adding the dominant emotion to the output dictionary
     output['dominant_emotion'] = dominant_emotion
-
+    
     return output
