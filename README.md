@@ -21,10 +21,11 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Ensure you have the following installed:
-- Python 3.8 or later
+- Python 3.8 or higher
+- Flask
 - Requests library
 
-You can install the Requests library using pip:
+Install the necessary Python libraries using pip:
+
 ```bash
-pip install requests
+pip install flask requests
